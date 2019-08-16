@@ -7,7 +7,7 @@ import { concat, Observable, of, timer } from 'rxjs';
 import { debounceTime, distinctUntilChanged, mapTo, switchMap } from 'rxjs/operators';
 import { FormLayouts } from './form-layout.types';
 
-// Bellow stub functions to demotrate functionality
+// Bellow helper stub functions required by some components inside the form (not important)
 
 const uploadFileFun = (file: File) =>
     timer(1000).pipe(mapTo({ id: file.name, name: file.name, src: 'https://pbs.twimg.com/media/DuEkvqTW0AIlTSo.jpg' }));
@@ -29,6 +29,7 @@ const typeaheadFun = (term$: Observable<string>) =>
             )
         )
     );
+///
     
 const definition: FormLayouts.FormLayout = {
     kind: 'fields',
